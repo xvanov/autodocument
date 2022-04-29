@@ -1,0 +1,10 @@
+// Example Sublet Config
+
+{
+address = "123 Main Street, New York, New York"
+owner = "John Smith"
+tenant = "Smith Johnes"
+price = 1500
+deposit = 1500
+}
+
