@@ -31,7 +31,7 @@ def generate_sublet_agreement(outputFile, first, last, confName, contBool):
         contClause = '(already paid)'
     else:
         conClause = ''
-    agreement = f"""Sub-license Agreement
+    agreement = f"""Sub-lease Agreement
 
 
 {owner} is subleasing one bedroom at {address} to {tenant} (sub-licensee) from {first}, until {last}. The sub-licensee agrees to pay:
@@ -41,7 +41,7 @@ def generate_sublet_agreement(outputFile, first, last, confName, contBool):
         3. 1/6th of utilities (water, electricity and gas) for the utility billing period due {last}
 
                 The security deposit will be refunded by {depositReturn}, unless items or furniture are missing, broken, or the room was not left in a clean condition. The sub-licensee is required to respect the rules and regulations of the original license agreement as well as keeping the common areas clean and being respectful in sharing the house with the rest of the occupants. The sub-licensee is responsible for cleaning the room, the bathroom and kitchen after use. No smoking or pets are allowed on the premises.
-                The house is fully furnished, with utilities, wireless internet, washer and dryer use included in the rent. The sub-licensee will provide  own household consumables.
+                The house is fully furnished with wireless internet, washer and dryer use included in the rent. The sub-licensee will provide  own household consumables.
                 The sub-licensee will be solely responsible for ensuring that the payments are made as stated in this agreement.
 
 
