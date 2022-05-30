@@ -30,8 +30,8 @@ def generate_sublet_agreement(outputFile, first, last, confName, contBool):
     if contBool:
         contClause = '(already paid)'
     else:
-        conClause = ''
-    agreement = f"""Sub-lease Agreement
+        contClause = ''
+    agreement = f"""Sublease Agreement
 
 
 {owner} is subleasing one bedroom at {address} to {tenant} (sub-licensee) from {first}, until {last}. The sub-licensee agrees to pay:
@@ -40,19 +40,17 @@ def generate_sublet_agreement(outputFile, first, last, confName, contBool):
         2. ${price} due {first}
         3. 1/6th of utilities (water, electricity and gas) for the utility billing period due {last}
 
-                The security deposit will be refunded by {depositReturn}, unless items or furniture are missing, broken, or the room was not left in a clean condition. The sub-licensee is required to respect the rules and regulations of the original license agreement as well as keeping the common areas clean and being respectful in sharing the house with the rest of the occupants. The sub-licensee is responsible for cleaning the room, the bathroom and kitchen after use. No smoking or pets are allowed on the premises.
-                The house is fully furnished with wireless internet, washer and dryer use included in the rent. The sub-licensee will provide  own household consumables.
-                The sub-licensee will be solely responsible for ensuring that the payments are made as stated in this agreement.
+                The security deposit will be refunded by {depositReturn}, unless items or furniture are missing, broken, or the room and common areas were not left in a clean condition. The sub-licensee is required to respect the rules and regulations of the original license agreement as well as keeping the common areas clean and being respectful in sharing the house with the rest of the occupants. The sub-licensee is responsible for cleaning the room, the bathroom and kitchen after use. No smoking or pets are allowed on the premises. The house is fully furnished with wireless internet, washer and dryer use included in the rent. The sub-licensee will provide  own household consumables. The sub-licensee will be solely responsible for ensuring that the payments are made as stated in this agreement.
 
 
 
-{tenant}                    ________________                    __________
-(sub-licensee)              (signature)                         (date)
+{tenant}\t\t\t________________\t\t__________
+(sub-licensee)\t\t\t\t(signature)\t\t\t(date)
 
 
 
-{owner}                     ________________                    _________
-(sub-licensor)              (signature)                         (date)
+{owner}\t\t\t\t________________\t\t_________
+(sub-licensor)\t\t\t\t(signature)\t\t\t(date)
 
     """
     with open(outputFile, 'w') as f:
@@ -66,7 +64,7 @@ if __name__ == '__main__':
     fmt = '%Y-%m-%d'
     first = datetime.datetime.strptime(day, fmt)
     last = last_day_of_month(first)
-    outputFile = f'./output/{confPath.split(".")[0]}_{day}.txt'
+    outputFile = f'/home/alex/cur/8_lgx/house/tenants/{confPath.split(".")[0]}_{day}.txt'
     generate_sublet_agreement(outputFile, first, last, confPath, contBool)
 
 
