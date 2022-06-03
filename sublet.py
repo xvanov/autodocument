@@ -44,12 +44,12 @@ def generate_sublet_agreement(outputFile, first, last, confName, contBool):
 
 
 
-{tenant}\t\t\t________________\t\t__________
+{tenant}
 (sub-licensee)\t\t\t\t(signature)\t\t\t(date)
 
 
 
-{owner}\t\t\t\t________________\t\t_________
+{owner}
 (sub-licensor)\t\t\t\t(signature)\t\t\t(date)
 
     """
